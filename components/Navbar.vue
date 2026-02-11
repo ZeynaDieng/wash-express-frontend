@@ -9,11 +9,11 @@
           <img src="/images/logo-wash-express.jpg" alt="Wash Express" class="w-full h-full object-cover" />
         </div>
         <div class="flex flex-col text-left">
-          <span class="font-black text-xl uppercase tracking-tighter leading-none transition-colors duration-500">
+          <span class="font-black text-xl tracking-tighter leading-none transition-colors duration-500">
             <span class="text-primary">Wash</span>
             <span class="text-secondary ml-1">Express</span>
           </span>
-          <span class="text-[10px] font-black tracking-[0.4em] uppercase text-slate-400">Invest Group</span>
+          <span class="text-[10px] font-black tracking-[0.4em] text-slate-400">Invest Group</span>
         </div>
       </NuxtLink>
       
@@ -22,7 +22,7 @@
           v-for="item in navItems" 
           :key="item.id" 
           :to="item.path"
-          class="text-[11px] font-black uppercase tracking-widest transition-all hover:text-primary"
+            class="text-[11px] font-black tracking-widest transition-all hover:text-primary"
           :class="[
 
             route.path === item.path ? '!text-primary border-b-2 border-primary pb-1' : ''
@@ -32,7 +32,7 @@
         </NuxtLink>
         <NuxtLink 
           to="/shop" 
-          class="px-8 py-3 rounded-full text-[11px] font-black  uppercase tracking-widest transition-all"
+          class="px-8 py-3 rounded-full text-[11px] font-black tracking-widest transition-all"
           :class="route.path === '/shop' ? 'bg-primary text-white' : 'bg-primary text-white hover:bg-primary hover:text-white shadow-lg shadow-blue-500/20'"
         >
           Boutique Expert

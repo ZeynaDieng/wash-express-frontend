@@ -28,11 +28,11 @@ useHead({
     <!-- 1. MISSION & VISION -->
     <div v-if="mission" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32 animate-in slide-in-from-bottom-8 duration-700">
        <div class="space-y-8">
-           <div v-if="mission.badge" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-600 font-black uppercase text-[10px] tracking-widest">
+           <div v-if="mission.badge" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-600 font-black text-[10px] tracking-widest">
                 <Leaf :size="14" /> {{ mission.badge }}
            </div>
            
-           <h3 class="text-3xl font-black text-primary uppercase tracking-tighter leading-tight">
+           <h3 class="text-3xl font-black text-primary tracking-tighter leading-tight">
                {{ mission.title }}
            </h3>
            
@@ -45,8 +45,8 @@ useHead({
        <div class="relative bg-primary rounded-[3rem] p-12 text-white overflow-hidden shadow-2xl items-center flex min-h-[300px]">
            <div v-if="mission.bg_image" class="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay" :style="{ backgroundImage: `url(${mission.bg_image})` }"></div>
            <blockquote class="relative z-10 text-2xl font-black text-center  leading-relaxed">
-             "{{ mission.quote }}"
-             <span v-if="mission.quote_footer" class="text-primary not- mt-4 block text-base font-bold tracking-widest uppercase">{{ mission.quote_footer }}</span>
+             {{ mission.quote }}
+             <span v-if="mission.quote_footer" class="text-primary not- mt-4 block text-base font-bold tracking-widest">{{ mission.quote_footer }}</span>
            </blockquote>
        </div>
     </div>
@@ -54,7 +54,7 @@ useHead({
     <!-- 2. POURQUOI CHOISIR WASH EXPRESS -->
     <div v-if="whyChoose && whyChoose.length > 0" class="mb-32">
         <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 animate-in slide-in-from-bottom-8 duration-700 delay-200">
-            <h3 class="text-3xl font-black text-primary uppercase tracking-tighter">Pourquoi Choisir Wash Express ?</h3>
+            <h3 class="text-3xl font-black text-primary tracking-tighter">Pourquoi Choisir Wash Express ?</h3>
             <p class="text-slate-500 font-medium">Vous désirez un service de pressing rapide, fiable et pratique ? Ne cherchez plus loin.</p>
         </div>
 
@@ -64,7 +64,7 @@ useHead({
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary shadow-sm mb-6 group-hover:bg-secondary cursor-pointer group-hover:text-primary transition-colors">
                     <component :is="getIcon(item.icon)" :size="28" />
                 </div>
-                <h4 class="text-lg font-black uppercase tracking-tight mb-4 text-primary">{{ item.title }}</h4>
+                <h4 class="text-lg font-black tracking-tight mb-4 text-primary">{{ item.title }}</h4>
                 <p class="text-sm text-slate-500 leading-relaxed">
                     {{ item.description }}
                 </p>
@@ -78,7 +78,7 @@ useHead({
         
         <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div class="space-y-8">
-                <h3 class="text-4xl font-black uppercase tracking-tighter leading-tight">
+                <h3 class="text-4xl font-black tracking-tighter leading-tight">
                     {{ educational.title }}
                 </h3>
                 <p v-if="educational.subtitle" class="text-slate-100 text-lg leading-relaxed">
@@ -87,7 +87,7 @@ useHead({
                 <div v-if="educational.highlight" class="p-6 bg-white/5 rounded-2xl border border-white/5 backdrop-blur-sm">
                    <Zap class="text-secondary mb-4" :size="32" />
                    <p class="text-sm font-medium text-slate-100">
-                     "{{ educational.highlight }}"
+                     {{ educational.highlight }}
                    </p>
                 </div>
             </div>

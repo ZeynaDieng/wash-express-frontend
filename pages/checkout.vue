@@ -4,48 +4,48 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-20   text-left    text-left">
       <div class="space-y-12    text-left     text-left">
         <div class="p-12 border-2 border-slate-50 rounded-[3rem] bg-white shadow-xl shadow-slate-100 space-y-10   text-left     text-left">
-          <h3 class="text-2xl font-black text-primary uppercase tracking-tighter border-l-4 border-primary pl-6 text-left">Vos Coordonnées</h3>
+          <h3 class="text-2xl font-black text-primary tracking-tighter border-l-4 border-primary pl-6 text-left">Vos Coordonnées</h3>
           
           <div class="space-y-4">
             <div class="grid grid-cols-2 gap-4">
               <div class="space-y-2 text-left">
-                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Prénom</label>
+                <label class="text-[10px] font-black tracking-widest text-slate-400">Prénom</label>
                 <input v-model="form.firstName" type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="Jean">
               </div>
               <div class="space-y-2 text-left">
-                <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Nom</label>
+                <label class="text-[10px] font-black tracking-widest text-slate-400">Nom</label>
                 <input v-model="form.lastName" type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="Diop">
               </div>
             </div>
 
             <div class="space-y-2 text-left">
-               <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Email</label>
+               <label class="text-[10px] font-black tracking-widest text-slate-400">Email</label>
                <input v-model="form.email" type="email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="jean.diop@exemple.com">
             </div>
 
             <div class="space-y-2 text-left">
-               <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Téléphone Mobile</label>
+               <label class="text-[10px] font-black tracking-widest text-slate-400">Téléphone Mobile</label>
                <input v-model="form.phone" type="tel" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="+221 77 ...">
             </div>
 
              <div class="space-y-2 text-left">
-               <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Adresse de Livraison</label>
+               <label class="text-[10px] font-black tracking-widest text-slate-400">Adresse de Livraison</label>
                <input v-model="form.address" type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="Quartier, Rue...">
             </div>
             
             <div class="grid grid-cols-2 gap-4">
                <div class="space-y-2 text-left">
-                 <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Ville</label>
+                 <label class="text-[10px] font-black tracking-widest text-slate-400">Ville</label>
                  <input v-model="form.city" type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" placeholder="Dakar">
                </div>
                 <div class="space-y-2 text-left">
-                 <label class="text-[10px] font-black uppercase tracking-widest text-slate-400">Pays</label>
+                 <label class="text-[10px] font-black tracking-widest text-slate-400">Pays</label>
                  <input v-model="form.country" type="text" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:border-primary transition-colors" readonly>
                </div>
             </div>
           </div>
 
-          <h3 class="text-2xl font-black text-primary uppercase tracking-tighter border-l-4 border-primary pl-6 pt-6 text-left">Moyen de Paiement</h3>
+          <h3 class="text-2xl font-black text-primary tracking-tighter border-l-4 border-primary pl-6 pt-6 text-left">Moyen de Paiement</h3>
           <div class="grid grid-cols-2 gap-6">
             <button 
               v-for="m in paymentMethods" 
@@ -58,7 +58,7 @@
               ]"
             >
               <Wallet :size="24" class="text-primary"/>
-              <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 group-hover:text-primary text-center">{{ m.label }}</span>
+              <span class="text-[10px] font-black tracking-widest text-slate-500 group-hover:text-primary text-center">{{ m.label }}</span>
               <span v-if="m.disabled" class="absolute top-2 right-4 text-[8px] font-bold text-red-400 bg-red-50 px-2 py-1 rounded-full">Bientôt</span>
             </button>
           </div>
@@ -66,7 +66,7 @@
       </div>
       <div class="space-y-10 lg:pt-0    text-left     text-left">
         <div class="p-12 bg-primary text-white rounded-[4rem] shadow-2xl relative overflow-hidden   text-left      text-left">
-          <h3 class="text-2xl font-black uppercase tracking-tighter mb-10 border-b border-white/10 pb-6 text-left       text-left">Résumé Expert</h3>
+          <h3 class="text-2xl font-black tracking-tighter mb-10 border-b border-white/10 pb-6 text-left       text-left">Résumé Expert</h3>
           <ClientOnly>
             <div class="space-y-6 mb-12  text-left        text-left">
               <div v-for="item in cart" :key="item.id" class="flex justify-between items-center text-xs  text-left         text-left">
@@ -74,7 +74,7 @@
                 <span class="font-black  text-left         text-left ">{{ (item.price * item.qty).toLocaleString() }} CFA</span>
               </div>
               <div class="flex justify-between pt-8 border-t border-white/10  text-left         text-left ">
-                <span class="font-bold text-slate-100 text-[10px]  text-left uppercase          text-left">Total Commande</span>
+                <span class="font-bold text-slate-100 text-[10px]  text-left          text-left">Total Commande</span>
                 <span class="text-3xl font-black text-primary tracking-tighter  text-left          text-left ">{{ cartTotal.toLocaleString() }} CFA</span>
               </div>
             </div>
@@ -91,7 +91,7 @@
           <button 
             @click="handlePayment"
             :disabled="isProcessing"
-            class="w-full bg-secondary text-primary py-6 rounded-2xl font-black uppercase text-xs tracking-[0.5em] shadow-2xl transition-all hover:bg-white flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-wait"
+            class="w-full bg-secondary text-primary py-6 rounded-2xl font-black text-xs tracking-[0.5em] shadow-2xl transition-all hover:bg-white flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-wait"
           >
             <Loader2 v-if="isProcessing" class="animate-spin" :size="18" />
             <span>{{ isProcessing ? 'Traitement...' : 'Payer & Commander' }}</span>

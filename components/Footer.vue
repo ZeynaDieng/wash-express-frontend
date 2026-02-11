@@ -7,7 +7,7 @@
           <div class="w-10 h-10 rounded-xl overflow-hidden bg-white shadow-lg">
              <img src="/images/logo-wash-express.jpg" alt="Wash Express" class="w-full h-full object-cover" />
           </div>
-          <span class="font-black text-3xl uppercase tracking-tighter leading-none">
+          <span class="font-black text-3xl tracking-tighter leading-none">
             Wash <span class="text-secondary">Express</span>
           </span>
         </div>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="text-left">
-        <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-secondary">Expertise</h4>
+          <h4 class="text-[10px] font-black tracking-[0.4em] mb-10 text-secondary">Expertise</h4>
         <ul class="space-y-4 text-sm font-bold tracking-tight text-slate-100 text-left">
           <li class="cursor-pointer hover:text-secondary flex items-center gap-2 text-left">
             <ChevronRight :size="14" class="text-secondary"/> <NuxtLink to="/services-b2c">Pressing Professionnel</NuxtLink>
@@ -38,7 +38,7 @@
         </ul>
       </div>
       <div class="text-left">
-        <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-secondary">Institutionnel</h4>
+        <h4 class="text-[10px] font-black tracking-[0.4em] mb-10 text-secondary">Institutionnel</h4>
         <ul class="space-y-4 text-sm font-bold tracking-tight text-slate-100 text-left">
           <li class="cursor-pointer hover:text-secondary text-left"><NuxtLink to="/about">Notre Histoire</NuxtLink></li>
           <li class="cursor-pointer hover:text-secondary text-left"><NuxtLink to="/how-it-works">Processus & Fonctionnement</NuxtLink></li>
@@ -46,18 +46,18 @@
         </ul>
       </div>
       <div class="text-left">
-        <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-10 text-secondary text-left">Légal</h4>
+        <h4 class="text-[10px] font-black tracking-[0.4em] mb-10 text-secondary text-left">Légal</h4>
         <ul class="space-y-4 text-sm font-bold tracking-tight text-slate-100 text-left">
           <li class="cursor-pointer hover:text-secondary text-left"><NuxtLink to="/legal">Mentions Légales</NuxtLink></li>
           <li class="cursor-pointer hover:text-secondary text-left"><NuxtLink to="/privacy">Confidentialité</NuxtLink></li>
           <li class="pt-6 border-t border-white/5 text-left">
-            <span class="block text-[9px] uppercase text-secondary font-black mb-2 text-left text-left">Support Direct</span>
+            <span class="block text-[9px] text-secondary font-black mb-2 text-left text-left">Support Direct</span>
             <p v-if="footer" class="text-xs text-left text-left">{{ footer.support_phone }}</p>
           </li>
         </ul>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.5em] text-secondary">
+    <div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-black tracking-[0.5em] text-secondary">
       <span>© 2026 Wash Express Invest Group</span>
       <div v-if="footer" class="flex gap-8 mt-6 md:mt-0">
         <span v-for="city in footer.villes" :key="city">{{ city }}</span>

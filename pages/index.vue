@@ -12,20 +12,20 @@
       <!-- Content -->
       <div v-if="hero" class="relative max-w-7xl mx-auto px-6 w-full">
         <div class="max-w-3xl space-y-10">
-          <div v-if="hero.badge" class="inline-flex items-center gap-3 px-6 py-2 border-2 border-primary/30 rounded-full bg-white/5 backdrop-blur-md text-secondary text-[10px] font-black uppercase tracking-[0.4em] animate-pulse">
+          <div v-if="hero.badge" class="inline-flex items-center gap-3 px-6 py-2 border-2 border-primary/30 rounded-full bg-white/5 backdrop-blur-md text-secondary text-[10px] font-black tracking-[0.4em] animate-pulse">
             {{ hero.badge }}
           </div>
-          <h1 class="text-7xl md:text-9xl font-black text-white uppercase tracking-tighter leading-[0.9] drop-shadow-2xl animate-in slide-in-from-bottom-12 duration-1000">
+          <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter leading-[0.9] drop-shadow-2xl animate-in slide-in-from-bottom-12 duration-1000">
             {{ hero.title }}
           </h1>
           <p class="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed max-w-2xl">
             {{ hero.subtitle }}
           </p>
           <div class="flex flex-wrap gap-6 pt-6">
-            <NuxtLink to="/invest-packs" class="group bg-primary text-secondary px-12 py-5 rounded-2xl font-black uppercase text-xs tracking-[0.3em] shadow-2xl hover:scale-105 transition-all flex items-center gap-3">
+            <NuxtLink to="/invest-packs" class="group bg-primary text-secondary px-12 py-5 rounded-2xl font-black text-xs tracking-[0.3em] shadow-2xl hover:scale-105 transition-all flex items-center gap-3">
               Découvrir les Packs <ArrowRight :size="18" class="group-hover:translate-x-2 transition-transform"/>
             </NuxtLink>
-            <NuxtLink to="/services-b2c" class="px-12 py-5 border-2 border-white/20 text-white rounded-2xl font-black uppercase text-xs tracking-[0.3em] hover:bg-white hover:text-primary transition-all backdrop-blur-sm">
+            <NuxtLink to="/services-b2c" class="px-12 py-5 border-2 border-white/20 text-white rounded-2xl font-black text-xs tracking-[0.3em] hover:bg-white hover:text-primary transition-all backdrop-blur-sm">
               Savoir-faire
             </NuxtLink>
           </div>
@@ -56,9 +56,9 @@
                </div>
             </div>
             <div class="p-10 text-left space-y-4">
-              <h3 class="text-2xl font-black text-primary uppercase tracking-tighter">{{ p.title }}</h3>
+              <h3 class="text-2xl font-black text-primary tracking-tighter">{{ p.title }}</h3>
               <p class="text-sm text-slate-500 font-medium leading-relaxed">{{ p.description }}</p>
-              <button class="text-[10px] font-black uppercase tracking-[0.4em] text-primary pt-4 flex items-center gap-2 group-hover:gap-4 transition-all">
+              <button class="text-[10px] font-black tracking-[0.4em] text-primary pt-4 flex items-center gap-2 group-hover:gap-4 transition-all">
                 Explorer la division <ChevronRight :size="14" />
               </button>
             </div>

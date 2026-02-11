@@ -8,14 +8,14 @@
             <component :is="getIcon(c.icon)" :size="28" />
           </div>
           <div class="text-left">
-            <h4 class="font-black text-primary uppercase text-xs mb-2">{{ c.label }}</h4>
+            <h4 class="font-black text-primary text-xs mb-2">{{ c.label }}</h4>
             <p class="text-lg text-slate-500 font-medium leading-relaxed">{{ c.val }}</p>
           </div>
         </div>
       </div>
       <div class="bg-primary p-16 rounded-[4rem] text-white shadow-2xl relative overflow-hidden animate-in slide-in-from-right-6 duration-1000 text-left">
         <div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-        <h3 class="text-3xl font-black uppercase tracking-tighter mb-12 underline underline-offset-[12px] decoration-primary  text-left">Formulaire de Requête</h3>
+        <h3 class="text-3xl font-black tracking-tighter mb-12 underline underline-offset-[12px] decoration-primary  text-left">Formulaire de Requête</h3>
         <form @submit.prevent="handleSubmit" class="space-y-8 text-left">
           <input v-model="form.name" type="text" placeholder="Dénomination / Nom complet" class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl text-sm  outline-none focus:border-primary transition-colors" />
           <input v-model="form.email" type="email" placeholder="Email institutionnel" class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl text-sm  outline-none focus:border-primary transition-colors" />
@@ -25,7 +25,7 @@
           <button 
             type="submit" 
             :disabled="isSubmitting"
-            class="w-full bg-secondary text-primary py-6 rounded-2xl font-black uppercase text-xs tracking-[0.5em] hover:bg-white shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-wait"
+            class="w-full bg-secondary text-primary py-6 rounded-2xl font-black text-xs tracking-[0.5em] hover:bg-white shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-wait"
           >
             <Loader2 v-if="isSubmitting" class="animate-spin" :size="18" />
             <span>{{ isSubmitting ? 'Transmission...' : 'Transmettre au Pôle Dédié' }}</span>

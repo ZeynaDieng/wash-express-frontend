@@ -15,7 +15,7 @@
       <div class="p-8 border-b flex justify-between items-center bg-primary text-white  text-left">
         <div class="flex items-center gap-3  text-left">
           <ShoppingBag class="text-primary" :size="24" />
-          <h3 class="text-2xl font-black uppercase tracking-tighter  text-left">Panier</h3>
+          <h3 class="text-2xl font-black tracking-tighter  text-left">Panier</h3>
         </div>
         <button @click="isCartOpen = false" class="p-2 hover:bg-white/10 rounded-full transition-colors ">
           <X :size="24" />
@@ -26,8 +26,8 @@
         <div class="flex-1 overflow-y-auto p-8 space-y-8  text-left">
           <div v-if="cart.length === 0" class="h-full flex flex-col items-center justify-center text-slate-200 space-y-6 text-center ">
             <ShoppingBag :size="100" stroke-width="0.5" class=" text-center" />
-            <p class="font-black uppercase text-xs tracking-[0.3em]  text-slate-400 text-center">Votre panier est vide</p>
-            <NuxtLink to="/shop" @click="isCartOpen = false" class="text-primary font-black uppercase text-[10px] tracking-widest underline decoration-2 underline-offset-8  text-center">
+            <p class="font-black text-xs tracking-[0.3em]  text-slate-400 text-center">Votre panier est vide</p>
+            <NuxtLink to="/shop" @click="isCartOpen = false" class="text-primary font-black text-[10px] tracking-widest underline decoration-2 underline-offset-8  text-center">
               Boutique
             </NuxtLink>
           </div>
@@ -47,7 +47,7 @@
             </div>
             <div class="flex-1 text-left flex flex-col justify-between py-1  text-left">
               <div class=" text-left">
-                <h4 class="text-xs font-black text-primary uppercase tracking-tight mb-1  text-left">{{ item.name }}</h4>
+                <h4 class="text-xs font-black text-primary tracking-tight mb-1  text-left">{{ item.name }}</h4>
                 <p class="text-sm font-black text-primary tracking-tighter  text-left">{{ item.price.toLocaleString() }} CFA</p>
               </div>
               <div class="flex items-center justify-between  text-left">
@@ -66,10 +66,10 @@
 
         <div v-if="cart.length > 0" class="p-8 bg-slate-50 border-t space-y-6 text-left shadow-[0_-20px_40px_rgba(0,0,0,0.05)]  text-left">
           <div class="flex justify-between items-center font-black  text-left">
-            <span class="text-[10px] uppercase tracking-[0.4em] text-slate-400 underline decoration-primary decoration-2 underline-offset-4  text-left">Sous-Total</span>
+            <span class="text-[10px] tracking-[0.4em] text-slate-400 underline decoration-primary decoration-2 underline-offset-4  text-left">Sous-Total</span>
             <span class="text-3xl text-primary tracking-tighter  text-left">{{ cartTotal.toLocaleString() }} CFA</span>
           </div>
-          <NuxtLink to="/checkout" @click="isCartOpen = false" class="w-full bg-primary text-secondary py-6 rounded-2xl font-black uppercase text-sm tracking-[0.3em] hover:bg-secondary hover:text-primary shadow-2xl transition-all flex items-center justify-center gap-4 group  text-left text-center">
+          <NuxtLink to="/checkout" @click="isCartOpen = false" class="w-full bg-primary text-secondary py-6 rounded-2xl font-black text-sm tracking-[0.3em] hover:bg-secondary hover:text-primary shadow-2xl transition-all flex items-center justify-center gap-4 group  text-left text-center">
             Valider la commande <ChevronRight :size="20" class="group-hover:translate-x-2 transition-transform  text-left"/>
           </NuxtLink>
         </div>

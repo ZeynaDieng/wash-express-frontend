@@ -3,14 +3,14 @@
     <div class="flex items-center gap-4 mb-4">
       <div class="w-16 h-1.5 bg-primary rounded-full"></div>
       <span 
-        class="text-[10px] font-black uppercase tracking-[0.5em]"
+        class="text-[10px] font-black tracking-[0.5em]"
         :class="light ? 'text-slate-400' : 'text-slate-500'"
       >
         {{ title }}
       </span>
     </div>
     <h2 
-      class="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none"
+      class="text-4xl md:text-6xl font-black tracking-tighter leading-none"
       :class="light ? 'text-white' : 'text-primary'"
     >
       {{ title }}

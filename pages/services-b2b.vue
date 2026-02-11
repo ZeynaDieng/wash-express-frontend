@@ -6,13 +6,13 @@
         <div class="text-primary group-hover:text-primary transition-colors duration-500 text-left">
           <component :is="getIcon(b.icon)" :size="40"/>
         </div>
-        <h3 class="text-3xl font-black text-primary uppercase tracking-tighter  text-left">{{ b.t || b.title }}</h3>
+        <h3 class="text-3xl font-black text-primary tracking-tighter  text-left">{{ b.t || b.title }}</h3>
         <p class="text-slate-500 font-medium leading-relaxed  text-lg text-left">{{ b.d || b.description }}</p>
         <div class="pt-6 flex items-center justify-between  text-left">
-          <NuxtLink to="/contact" class="text-[11px] font-black uppercase tracking-[0.3em] text-primary border-b-2 border-transparent hover:border-primary transition-all flex items-center gap-2  text-left">
+          <NuxtLink to="/contact" class="text-[11px] font-black tracking-[0.3em] text-primary border-b-2 border-transparent hover:border-primary transition-all flex items-center gap-2  text-left">
             Demander une cotation <ArrowRight :size="16" class=" text-left"/>
           </NuxtLink>
-          <span class="text-[10px] text-slate-300 font-bold uppercase tracking-widest  underline decoration-primary text-left">Division B2B</span>
+          <span class="text-[10px] text-slate-300 font-bold tracking-widest  underline decoration-primary text-left">Division B2B</span>
         </div>
       </div>
     </div>

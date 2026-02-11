@@ -19,7 +19,7 @@
           :key="link.id"
           :to="link.to"
           @click="$emit('close')"
-          class="text-left text-3xl md:text-5xl font-black uppercase tracking-tighter transition-all duration-500 flex items-center justify-between group py-3 border-b border-white/5 "
+          class="text-left text-3xl md:text-5xl font-black tracking-tighter transition-all duration-500 flex items-center justify-between group py-3 border-b border-white/5 "
           :class="route.path === link.to ? 'text-secondary translate-x-6' : 'text-white/60 hover:text-white'"
           :style="{ transitionDelay: `${isOpen ? idx * 70 : 0}ms`, transform: isOpen ? 'translateX(0)' : 'translateX(-50px)' }"
         >
@@ -29,8 +29,8 @@
       </div>
       
       <div class="pt-10 border-t border-white/5 flex gap-8">
-         <NuxtLink to="/legal" @click="$emit('close')" class="text-[10px] font-bold uppercase text-slate-300 hover:text-white transition-colors tracking-widest ">Gouvernance</NuxtLink>
-         <NuxtLink to="/privacy" @click="$emit('close')" class="text-[10px] font-bold uppercase text-slate-300 hover:text-white transition-colors tracking-widest ">Protection</NuxtLink>
+         <NuxtLink to="/legal" @click="$emit('close')" class="text-[10px] font-bold text-slate-300 hover:text-white transition-colors tracking-widest ">Gouvernance</NuxtLink>
+         <NuxtLink to="/privacy" @click="$emit('close')" class="text-[10px] font-bold text-slate-300 hover:text-white transition-colors tracking-widest ">Protection</NuxtLink>
       </div>
     </div>
   </div>
